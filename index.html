@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Index Animado</title>
+  <style>
+    /* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  font-family: 'Arial', sans-serif;
+  overflow: hidden;
+}
+
+.container {
+  text-align: center;
+}
+
+.name {
+  font-size: 3rem;
+  color: #fff;
+  margin: 20px 0;
+  position: relative;
+  animation: fadeInSlideUp 2s ease-out forwards, glowingText 3s infinite;
+}
+
+@keyframes fadeInSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes glowingText {
+  0%, 100% {
+    text-shadow: 0 0 5px #fff, 0 0 15px #fff, 0 0 20px #1e90ff, 0 0 25px #1e90ff;
+  }
+  50% {
+    text-shadow: 0 0 10px #fff, 0 0 20px #1e90ff, 0 0 30px #00ffff, 0 0 40px #00ffff;
+  }
+}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="name">Miguel Tovar</h1>
+    <h1 class="name">Alejandro Chavarría</h1>
+  </div>
+</body>
+</html>
